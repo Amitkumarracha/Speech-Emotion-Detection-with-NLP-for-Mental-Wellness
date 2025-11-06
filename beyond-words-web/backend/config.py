@@ -117,7 +117,11 @@ API_HOST = "0.0.0.0"
 API_PORT = 8000
 
 # CORS settings
-CORS_ORIGINS = ["*"]  # In production, specify exact origins
+CORS_ORIGINS = [
+    "*",  # Allow all origins (can restrict to specific domains later)
+    "https://*.vercel.app",  # Vercel deployments
+    "http://localhost:3000",  # Local development
+]
 
 # =====================================================
 # EMOTION CLASSES
